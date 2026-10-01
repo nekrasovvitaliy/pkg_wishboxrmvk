@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params">
+		<fieldset name="task_params">
+			<field
+				name="limit"
+				type="number"
+				label="PLG_TASK_WISHBOXRMVK_FIELD_ORDER_LIMIT_LABEL"
+				default="10"
+				min="1"
+				max="100"
+				step="1"
+				required="true"
+				filter="integer"
+				validate="number"
+			/>
+		</fieldset>
+	</fields>
+</form>

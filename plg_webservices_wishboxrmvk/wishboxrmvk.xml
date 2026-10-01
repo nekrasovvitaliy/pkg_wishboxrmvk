@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="webservices" method="upgrade">
+	<name>plg_webservices_wishboxrmvk</name>
+	<author>Nekrasov Vitaliy</author>
+	<creationDate>September 2026</creationDate>
+	<authorEmail>nekrasov_vitaliy@list.ru</authorEmail>
+	<version>1.0.0</version>
+	<description>PLG_WEBSERVICES_WISHBOXRMVK_XML_DESCRIPTION</description>
+	<namespace path="src">Joomla\Plugin\Webservices\WishboxRmVk</namespace>
+	<files>
+		<folder plugin="wishboxrmvk">services</folder>
+		<folder>src</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/plg_webservices_wishboxrmvk.ini</language>
+		<language tag="en-GB">language/en-GB/plg_webservices_wishboxrmvk.sys.ini</language>
+		<language tag="ru-RU">language/ru-RU/plg_webservices_wishboxrmvk.ini</language>
+		<language tag="ru-RU">language/ru-RU/plg_webservices_wishboxrmvk.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="group_id" type="number"
+					label="PLG_WEBSERVICES_WISHBOXRMVK_FIELD_GROUP_ID_LABEL"
+					required="true"
+					min="1"
+					filter="integer"
+				/>
+				<field name="callback_secret" type="password"
+					label="PLG_WEBSERVICES_WISHBOXRMVK_FIELD_CALLBACK_SECRET_LABEL"
+					required="true"
+					filter="raw"
+				/>
+				<field name="confirmation_code" type="text"
+					label="PLG_WEBSERVICES_WISHBOXRMVK_FIELD_CONFIRMATION_CODE_LABEL"
+					required="true"
+					filter="raw"
+				/>
+				<field name="access_token" type="password"
+					label="PLG_WEBSERVICES_WISHBOXRMVK_FIELD_ACCESS_TOKEN_LABEL"
+					required="true"
+					filter="raw"
+				/>
+				<field name="order_import_limit" type="number"
+					label="PLG_WEBSERVICES_WISHBOXRMVK_FIELD_ORDER_IMPORT_LIMIT_LABEL"
+					default="10"
+					min="1"
+					max="100"
+					step="1"
+					filter="integer"
+				/>
+				<field name="order_currency" type="text"
+					label="PLG_WEBSERVICES_WISHBOXRMVK_FIELD_ORDER_CURRENCY_LABEL"
+					default="RUB"
+					required="true"
+					filter="cmd"
+				/>
+				<field name="shipping_method_id" type="number"
+					label="PLG_WEBSERVICES_WISHBOXRMVK_FIELD_SHIPPING_METHOD_ID_LABEL"
+					default="0"
+					min="0"
+					step="1"
+					filter="integer"
+				/>
+				<field name="payment_method_id" type="number"
+					label="PLG_WEBSERVICES_WISHBOXRMVK_FIELD_PAYMENT_METHOD_ID_LABEL"
+					default="0"
+					min="0"
+					step="1"
+					filter="integer"
+				/>
+				<field name="order_user_id" type="number"
+					label="PLG_WEBSERVICES_WISHBOXRMVK_FIELD_ORDER_USER_ID_LABEL"
+					default="0"
+					min="0"
+					step="1"
+					filter="integer"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

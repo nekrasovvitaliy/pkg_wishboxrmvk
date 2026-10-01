@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="package" method="upgrade">
+	<name>pkg_wishboxrmvk</name>
+	<packagename>wishboxrmvk</packagename>
+	<author>Nekrasov Vitaliy</author>
+	<authorEmail>nekrasov_vitaliy@list.ru</authorEmail>
+	<creationDate>September 2026</creationDate>
+	<version>1.0.0</version>
+	<packager>Nekrasov Vitaliy</packager>
+	<description>PKG_WISHBOXRMVK_XML_DESCRIPTION</description>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/pkg_wishboxrmvk.sys.ini</language>
+		<language tag="ru-RU">ru-RU/pkg_wishboxrmvk.sys.ini</language>
+	</languages>
+	<files>
+		<file type="library" id="wishboxrmvk">lib_wishboxrmvk.zip</file>
+		<file type="plugin" group="task" id="wishboxrmvk">plg_task_wishboxrmvk.zip</file>
+		<file type="plugin" group="webservices" id="wishboxrmvk">plg_webservices_wishboxrmvk.zip</file>
+	</files>
+</extension>

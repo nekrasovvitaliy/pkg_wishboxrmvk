@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="task" method="upgrade">
+	<name>plg_task_wishboxrmvk</name>
+	<author>Nekrasov Vitaliy</author>
+	<creationDate>September 2026</creationDate>
+	<authorEmail>nekrasov_vitaliy@list.ru</authorEmail>
+	<version>1.0.0</version>
+	<description>PLG_TASK_WISHBOXRMVK_XML_DESCRIPTION</description>
+	<namespace path="src">Joomla\Plugin\Task\WishboxRmVk</namespace>
+	<files>
+		<folder plugin="wishboxrmvk">services</folder>
+		<folder>forms</folder>
+		<folder>src</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/plg_task_wishboxrmvk.ini</language>
+		<language tag="en-GB">language/en-GB/plg_task_wishboxrmvk.sys.ini</language>
+		<language tag="ru-RU">language/ru-RU/plg_task_wishboxrmvk.ini</language>
+		<language tag="ru-RU">language/ru-RU/plg_task_wishboxrmvk.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="group_id" type="number"
+					label="PLG_TASK_WISHBOXRMVK_FIELD_GROUP_ID_LABEL"
+					required="true"
+					min="1"
+				/>
+				<field name="access_token" type="password"
+					label="PLG_TASK_WISHBOXRMVK_FIELD_ACCESS_TOKEN_LABEL"
+					required="true"
+					filter="raw"
+				/>
+				<field name="product_price_ratio" type="number"
+					label="PLG_TASK_WISHBOXRMVK_FIELD_PRODUCT_PRICE_RATIO_LABEL"
+					default="1"
+					min="0"
+					step="0.01"
+				/>
+				<field name="order_currency" type="text"
+					label="PLG_TASK_WISHBOXRMVK_FIELD_ORDER_CURRENCY_LABEL"
+					default="RUB"
+					required="true"
+					filter="cmd"
+				/>
+				<field name="shipping_method_id" type="number"
+					label="PLG_TASK_WISHBOXRMVK_FIELD_SHIPPING_METHOD_ID_LABEL"
+					default="0"
+					min="0"
+					step="1"
+					filter="integer"
+				/>
+				<field name="payment_method_id" type="number"
+					label="PLG_TASK_WISHBOXRMVK_FIELD_PAYMENT_METHOD_ID_LABEL"
+					default="0"
+					min="0"
+					step="1"
+					filter="integer"
+				/>
+				<field name="order_user_id" type="number"
+					label="PLG_TASK_WISHBOXRMVK_FIELD_ORDER_USER_ID_LABEL"
+					default="0"
+					min="0"
+					step="1"
+					filter="integer"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
